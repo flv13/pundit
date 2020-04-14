@@ -91,8 +91,8 @@ hooks:
   #     runas: 
 # During the BeforeInstall deployment lifecycle event, run the commands 
 #   in the script specified in "location".
- # BeforeInstall:
-  #   - location:
+  BeforeInstall:
+     - location: pipeline-scripts/beforeInstall.sh
   #     timeout:
   #     runas:
 #    - location: validate.sh
@@ -102,6 +102,8 @@ hooks:
 #   in the script specified in "location".
   AfterInstall:
       # runas:
+    - location: pipeline-scripts/afterInstall.sh
+      timeout: 60
     - location: pipeline-scripts/set-envfile.sh
       timeout: 60
     - location: pipeline-scripts/run-app.sh
