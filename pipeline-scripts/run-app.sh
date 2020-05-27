@@ -9,8 +9,6 @@ function finish {
 trap finish EXIT
 
 #export COMPOSER_HOME="/root/.composer"
-#cd /home/ubuntu/app/
-#cat flv13.sh
 #composer install --no-interaction --prefer-dist --optimize-autoloader > /home/ubuntu/1.txt
 #php artisan key:generate >> /home/ubuntu/1.txt
 #vendor/bin/phpunit >> /home/ubuntu/1.txt
