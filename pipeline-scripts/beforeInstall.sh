@@ -7,3 +7,5 @@ if [ -d /home/temp ]; then
     rm -rf /home/temp
 fi
 mkdir -vp /home/temp
+cd /opt/codedeploy-agent/deployment-root/deployment-instructions
+sudo rm -rf *cleanup
